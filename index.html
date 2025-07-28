@@ -11,10 +11,10 @@
 </head>
 <body>
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero fade-in">
     <div class="container">
         <div class="hero-grid">
-            <img src="assets/images/foto_perfil.JPG" alt="Breno Luiz" class="hero-image">
+            <img src="assets/images/foto_perfil.JPG" alt="Breno Luiz" class="hero-image" loading="lazy" tabindex="0">
             <div class="hero-text">
                 <h1>Breno Luiz Schaefel</h1>
                 <h2 class="typing-effect">Desenvolvedor Sênior Fullstack</h2>
@@ -26,7 +26,7 @@
 </section>
 
 <!-- Sobre Mim Section -->
-<section id="sobre" class="about">
+<section id="sobre" class="about fade-in">
     <div class="container">
         <h2 class="section-title"><span>01.</span> Sobre Mim</h2>
         <div class="about-content">
@@ -47,17 +47,20 @@
                         <ul class="skills-list">
                             <li><i class="fab fa-java"></i> Java</li>
                             <li><i class="fab fa-php"></i> PHP</li>
+                            <li><i class="fab fa-laravel"></i> Laravel</li>
                             <li><i class="fas fa-database"></i> Delphi</li>
+                            <li><i class="fas fa-leaf"></i> Spring</li>
                         </ul>
                     </div>
 
                     <div class="skills-column">
                         <h3><i class="fas fa-database"></i> Bancos de Dados</h3>
                         <ul class="skills-list">
-                            <li>SQL Server</li>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-                            <li>Firebird</li>
+                            <li><i class="fas fa-database"></i> SQL Server</li>
+                            <li><i class="fas fa-database"></i> MySQL</li>
+                            <li><i class="fas fa-database"></i> PostgreSQL</li>
+                            <li><i class="fas fa-database"></i> Firebird</li>
+                            <li><i class="fas fa-database"></i> Oracle</li>
                         </ul>
                     </div>
 
@@ -65,8 +68,43 @@
                         <h3><i class="fas fa-cloud"></i> Infraestrutura</h3>
                         <ul class="skills-list">
                             <li><i class="fab fa-aws"></i> AWS</li>
-                            <li><i class="fas fa-server"></i> Configuração de Servidores</li>
+                            <li><i class="fas fa-server"></i> Linux</li>
                             <li><i class="fas fa-rocket"></i> Deploy</li>
+                            <li><i class="fas fa-server"></i> Apache</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-column">
+                        <h3><i class="fas fa-desktop"></i> Frontend</h3>
+                        <ul class="skills-list">
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                            <li><i class="fab fa-js"></i> JavaScript</li>
+                            <li><i class="fab fa-react"></i> React</li>
+                            <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-column">
+                        <h3><i class="fas fa-cogs"></i> DevOps & Cloud</h3>
+                        <ul class="skills-list">
+                            <li><i class="fab fa-git-alt"></i> Git</li>
+                            <li><i class="fab fa-github"></i> GitHub</li>
+                            <li><i class="fab fa-gitlab"></i> GitLab</li>
+                            <li><i class="fab fa-aws"></i> AWS</li>
+                            <li><i class="fab fa-google"></i> Google Cloud</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-column">
+                        <h3><i class="fas fa-tools"></i> Ferramentas</h3>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-code"></i> VS Code</li>
+                            <li><i class="fas fa-code"></i> IntelliJ</li>
+                            <li><i class="fas fa-code"></i> Eclipse</li>
+                            <li><i class="fas fa-terminal"></i> Terminal</li>
+                            <li><i class="fas fa-chart-line"></i> Postman</li>
+                            <li><i class="fas fa-database"></i> DBeaver</li>
                         </ul>
                     </div>
                 </div>
@@ -80,7 +118,7 @@
 </section>
 
 <!-- Minha Abordagem Section -->
-<section class="approach">
+<section class="approach fade-in">
     <div class="container">
         <h2 class="section-title"><span>02.</span> Minha Abordagem</h2>
         <div class="approach-grid">
@@ -107,7 +145,7 @@
 </section>
 
 <!-- Projetos Section -->
-<section id="projetos" class="projects">
+<section id="projetos" class="projects fade-in">
     <div class="container">
         <h2 class="section-title"><span>03.</span> Projetos em Destaque</h2>
 
@@ -128,23 +166,30 @@
             </div>
             <div class="project-content">
                 <p>
-                    Sistema completo de automação comercial desenvolvido para operar tanto online quanto offline, com:
+                    Sistema completo de automação comercial desenvolvido para operar tanto online quanto offline, atendendo empresas de médio e grande porte do varejo e atacado. O projeto envolveu desde a análise de requisitos, arquitetura, desenvolvimento fullstack, até a implantação e treinamento dos usuários.
                 </p>
                 <ul>
-                    <li>Versão web para gestão (cadastros, relatórios, NF-e)</li>
-                    <li>PDV desktop instalável para locais com internet instável</li>
-                    <li>Sincronização bidirecional via API personalizada</li>
-                    <li>Total conformidade com legislação fiscal brasileira</li>
+                    <li>Versão web para gestão (cadastros, relatórios, NF-e, controle de estoque e financeiro)</li>
+                    <li>PDV desktop instalável para locais com internet instável, garantindo operação contínua</li>
+                    <li>Sincronização bidirecional via API personalizada, com resolução automática de conflitos</li>
+                    <li>Total conformidade com legislação fiscal brasileira, incluindo emissão de notas fiscais eletrônicas</li>
+                    <li>Implementação de autenticação segura, controle de permissões e logs de auditoria</li>
+                    <li>Desenvolvimento de integrações com sistemas de terceiros (contabilidade, bancos, marketplaces)</li>
                 </ul>
                 <p class="project-result">
-                    <i class="fas fa-check-circle"></i> <strong>Diferencial:</strong> Solução híbrida que elimina perda de vendas mesmo sem conexão, com sincronização automática quando a internet volta.
+                    <i class="fas fa-check-circle"></i> <strong>Diferencial:</strong> Solução híbrida que elimina perda de vendas mesmo sem conexão, com sincronização automática quando a internet volta. Projeto desenvolvido 100% solo, com foco em escalabilidade, segurança e experiência do usuário. O sistema atualmente atende centenas de usuários simultâneos e já processou milhões em transações.
                 </p>
             </div>
         </div>
 
         <!-- Projeto 2 - Software Contabilidade Pública -->
         <div class="project-card">
-            <h3>Sistema de Contabilidade Pública</h3>
+            <div class="project-header">
+                <h3>Sistema de Contabilidade Pública</h3>
+                <div class="project-links">
+                    <span class="featured-badge">Destaque</span>
+                </div>
+            </div>
             <div class="project-techs">
                 <span><i class="fab fa-java"></i> Java</span>
                 <span><i class="fas fa-database"></i> PostgreSQL</span>
@@ -154,15 +199,17 @@
             </div>
             <div class="project-content">
                 <p>
-                    Dupla atuação em sistemas de contabilidade pública utilizados em municípios de todo Brasil:
+                    Atuação em sistemas de contabilidade pública utilizados por prefeituras e órgãos governamentais em todo o Brasil. O desafio foi modernizar um sistema legado robusto, garantindo a continuidade dos serviços e a conformidade com normas do setor público.
                 </p>
                 <ul>
-                    <li>Migração do sistema legado (Delphi 2006 + SQL Server) para nova versão em Java</li>
-                    <li>Desenvolvimento de APIs para integração com sistemas governamentais</li>
-                    <li>Manutenção e evolução das duas versões em paralelo</li>
+                    <li>Migração do sistema legado (Delphi 2006 + SQL Server) para nova versão em Java, com arquitetura baseada em microsserviços</li>
+                    <li>Desenvolvimento de APIs REST para integração com sistemas governamentais (SIAFIC, eSocial, Receita Federal)</li>
+                    <li>Manutenção e evolução das duas versões em paralelo, garantindo transição suave para os clientes</li>
+                    <li>Implementação de rotinas de importação/exportação de dados, relatórios fiscais e módulos de prestação de contas</li>
+                    <li>Automação de processos manuais, reduzindo erros e aumentando a produtividade dos usuários</li>
                 </ul>
                 <p class="project-result">
-                    <i class="fas fa-check-circle"></i> <strong>Resultado:</strong> Transição suave para os clientes, mantendo todas funcionalidades do sistema antigo enquanto adiciona novas capacidades.
+                    <i class="fas fa-check-circle"></i> <strong>Resultado:</strong> Transição bem-sucedida para os clientes, mantendo todas funcionalidades do sistema antigo enquanto adiciona novas capacidades. O sistema atende atualmente dezenas de municípios, processando grandes volumes de dados fiscais e contábeis com alta confiabilidade.
                 </p>
             </div>
         </div>
@@ -179,24 +226,29 @@
             </div>
             <div class="project-content">
                 <p>
-                    Sistema desktop completo desenvolvido do zero, incluindo:
+                    Sistema desktop completo desenvolvido do zero, focado em pequenas e médias empresas do comércio. O projeto envolveu desde a concepção, levantamento de requisitos, desenvolvimento, testes, implantação e suporte contínuo.
                 </p>
                 <ul>
-                    <li>Módulo fiscal com emissão de NF-e e NFC-e</li>
-                    <li>Controle de estoque e financeiro integrado</li>
-                    <li>PDV (Ponto de Venda) para operação diária</li>
-                    <li>Total conformidade com exigências da Receita Federal</li>
+                    <li>Módulo fiscal com emissão de NF-e e NFC-e, totalmente integrado à Receita Federal</li>
+                    <li>Controle de estoque, vendas, compras e financeiro integrado</li>
+                    <li>PDV (Ponto de Venda) otimizado para alta performance e facilidade de uso</li>
+                    <li>Implementação de rotinas de backup automático e recuperação de dados</li>
+                    <li>Customização de relatórios gerenciais e dashboards para tomada de decisão</li>
                 </ul>
                 <p class="project-result">
-                    <i class="fas fa-check-circle"></i> <strong>Destaque:</strong> Desenvolvimento 100% solo, desde análise de requisitos até implantação.
+                    <i class="fas fa-check-circle"></i> <strong>Destaque:</strong> Desenvolvimento 100% solo, desde análise de requisitos até implantação. O sistema já foi utilizado por dezenas de empresas, contribuindo para a modernização e automação de processos internos.
                 </p>
             </div>
+        </div>
+        <div class="project-card" style="text-align:center; background:rgba(100,255,218,0.05); border-left:3px dashed var(--accent);">
+            <h3 style="color:var(--accent); font-size:1.2rem; margin-bottom:1rem;"><i class="fas fa-ellipsis-h"></i> E muitos outros projetos!</h3>
+            <p style="color:var(--text-secondary); font-size:1.05rem;">Ao longo da minha carreira, já atuei em dezenas de outros sistemas, integrações, APIs, automações e soluções personalizadas para empresas de diversos segmentos.<br>Entre em contato para saber mais ou solicitar referências específicas.</p>
         </div>
     </div>
 </section>
 
 <!-- Contato Section -->
-<section id="contato" class="contact">
+<section id="contato" class="contact fade-in">
     <div class="container">
         <h2 class="section-title"><span>04.</span> Vamos Conversar?</h2>
         <div class="contact-grid">
@@ -216,6 +268,10 @@
                     <a href="https://www.instagram.com/brenoluiz54/" target="_blank" class="contact-item">
                         <i class="fab fa-instagram"></i>
                         <span>@brenoluiz54</span>
+                    </a>
+                    <a href="https://github.com/BrenoSchaefel" target="_blank" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>@BrenoSchaefel</span>
                     </a>
                 </div>
 
@@ -249,7 +305,7 @@
 <footer class="footer">
     <div class="container">
         <p>© <span id="year"></span> Breno Luiz Schaefel. Todos os direitos reservados.</p>
-        <p>Desenvolvido com <i class="fas fa-heart"></i> e código limpo</p>
+        <p>Desenvolvido com <i class="fas fa-heart"></i> e código limpo | <a href="https://github.com/BrenoSchaefel" target="_blank" style="color:var(--accent);text-decoration:none;"><i class="fab fa-github"></i> GitHub</a></p>
     </div>
 </footer>
 
