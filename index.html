@@ -3,309 +3,606 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breno Luiz | Desenvolvedor Sênior Fullstack</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Breno Luiz | Desenvolvedor Backend Sênior</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<!-- Hero Section -->
-<section class="hero fade-in">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>BL<span class="logo-bracket">/&gt;</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <div class="hero-grid-lines"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+    </div>
     <div class="container">
-        <div class="hero-grid">
-            <img src="assets/images/foto_perfil.JPG" alt="Breno Luiz" class="hero-image" loading="lazy" tabindex="0">
+        <div class="hero-content">
             <div class="hero-text">
-                <h1>Breno Luiz Schaefel</h1>
-                <h2 class="typing-effect">Desenvolvedor Sênior Fullstack</h2>
-                <p class="hero-description">Especialista em soluções completas, do backend ao frontend, com 8+ anos de experiência em desenvolvimento de software.</p>
-                <a href="#sobre" class="cta-button">Conheça mais sobre mim</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Sobre Mim Section -->
-<section id="sobre" class="about fade-in">
-    <div class="container">
-        <h2 class="section-title"><span>01.</span> Sobre Mim</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    Com 28 anos e mais de 8 anos de experiência em desenvolvimento de software, sou um profissional sênior completo, capaz de lidar com todos os aspectos de um projeto, desde a concepção até a implantação em produção.
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Disponível para oportunidades
+                </div>
+                <h1 class="hero-name">Breno Luiz<br><span class="name-highlight">Schaefel</span></h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-prefix">_</span>
+                    <span class="typing-effect" id="typingEffect"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-desc">
+                    Quase <strong>10 anos</strong> construindo backends robustos, APIs de alta performance
+                    e integrações complexas para automação comercial, contabilidade pública e área fiscal.
+                    Especialista em Java, Delphi e PHP/Laravel.
                 </p>
-                <p>
-                    Formado em <strong>Sistemas de Informação</strong> e com pós-graduação em <strong>Engenharia de Software</strong>, sempre busco me atualizar através de cursos e certificações para entregar as melhores soluções tecnológicas.
-                </p>
-                <p>
-                    Minha abordagem é <strong>pró-ativa</strong> e <strong>orientada a resultados</strong>. Tenho a capacidade de me adaptar a qualquer tecnologia, mas minhas especialidades principais são:
-                </p>
-
-                <div class="skills-container">
-                    <div class="skills-column">
-                        <h3><i class="fas fa-server"></i> Backend</h3>
-                        <ul class="skills-list">
-                            <li><i class="fab fa-java"></i> Java</li>
-                            <li><i class="fab fa-php"></i> PHP</li>
-                            <li><i class="fab fa-laravel"></i> Laravel</li>
-                            <li><i class="fas fa-database"></i> Delphi</li>
-                            <li><i class="fas fa-leaf"></i> Spring</li>
-                        </ul>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10<span class="stat-plus">+</span></span>
+                        <span class="stat-label">anos de exp.</span>
                     </div>
-
-                    <div class="skills-column">
-                        <h3><i class="fas fa-database"></i> Bancos de Dados</h3>
-                        <ul class="skills-list">
-                            <li><i class="fas fa-database"></i> SQL Server</li>
-                            <li><i class="fas fa-database"></i> MySQL</li>
-                            <li><i class="fas fa-database"></i> PostgreSQL</li>
-                            <li><i class="fas fa-database"></i> Firebird</li>
-                            <li><i class="fas fa-database"></i> Oracle</li>
-                        </ul>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">50<span class="stat-plus">+</span></span>
+                        <span class="stat-label">projetos entregues</span>
                     </div>
-
-                    <div class="skills-column">
-                        <h3><i class="fas fa-cloud"></i> Infraestrutura</h3>
-                        <ul class="skills-list">
-                            <li><i class="fab fa-aws"></i> AWS</li>
-                            <li><i class="fas fa-server"></i> Linux</li>
-                            <li><i class="fas fa-rocket"></i> Deploy</li>
-                            <li><i class="fas fa-server"></i> Apache</li>
-                        </ul>
-                    </div>
-
-                    <div class="skills-column">
-                        <h3><i class="fas fa-desktop"></i> Frontend</h3>
-                        <ul class="skills-list">
-                            <li><i class="fab fa-html5"></i> HTML5</li>
-                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                            <li><i class="fab fa-js"></i> JavaScript</li>
-                            <li><i class="fab fa-react"></i> React</li>
-                            <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
-                        </ul>
-                    </div>
-
-                    <div class="skills-column">
-                        <h3><i class="fas fa-cogs"></i> DevOps & Cloud</h3>
-                        <ul class="skills-list">
-                            <li><i class="fab fa-git-alt"></i> Git</li>
-                            <li><i class="fab fa-github"></i> GitHub</li>
-                            <li><i class="fab fa-gitlab"></i> GitLab</li>
-                            <li><i class="fab fa-aws"></i> AWS</li>
-                            <li><i class="fab fa-google"></i> Google Cloud</li>
-                        </ul>
-                    </div>
-
-                    <div class="skills-column">
-                        <h3><i class="fas fa-tools"></i> Ferramentas</h3>
-                        <ul class="skills-list">
-                            <li><i class="fas fa-code"></i> VS Code</li>
-                            <li><i class="fas fa-code"></i> IntelliJ</li>
-                            <li><i class="fas fa-code"></i> Eclipse</li>
-                            <li><i class="fas fa-terminal"></i> Terminal</li>
-                            <li><i class="fas fa-chart-line"></i> Postman</li>
-                            <li><i class="fas fa-database"></i> DBeaver</li>
-                        </ul>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">100<span class="stat-plus">+</span></span>
+                        <span class="stat-label">municípios atendidos</span>
                     </div>
                 </div>
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+                    <a href="#contato" class="btn btn-ghost">Entre em contato</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-wrapper">
+                    <div class="profile-ring"></div>
+                    <img src="assets/images/foto_perfil.JPG" alt="Breno Luiz Schaefel" class="profile-photo">
+                    <div class="profile-badge-java">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="profile-badge-php">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <div class="profile-badge-db">
+                        <i class="fas fa-database"></i>
+                    </div>
+                </div>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-filename">Breno.java</span>
+                    </div>
+                    <pre class="code-body"><code><span class="c-keyword">public class</span> <span class="c-class">Breno</span> {
+    <span class="c-keyword">private</span> <span class="c-type">int</span> experience = <span class="c-num">10</span>;
+    <span class="c-keyword">private</span> <span class="c-type">String</span>[] stack = {
+        <span class="c-str">"Java"</span>, <span class="c-str">"PHP"</span>, <span class="c-str">"Delphi"</span>,
+        <span class="c-str">"Spring"</span>, <span class="c-str">"Laravel"</span>
+    };
 
-                <p class="highlight">
-                    <i class="fas fa-heart"></i> Minha verdadeira paixão está no desenvolvimento de <strong>APIs robustas</strong> e <strong>microsserviços</strong>, especialmente na integração entre sistemas e na criação de arquiteturas escaláveis.
+    <span class="c-keyword">public</span> Solution <span class="c-fn">solve</span>(<span class="c-type">Problem</span> p) {
+        <span class="c-keyword">return new</span> <span class="c-class">Solution</span>(p);
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#sobre" class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<!-- ===== SOBRE ===== -->
+<section class="sobre" id="sobre">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">01. sobre mim</span>
+            <h2 class="section-title">Quem sou eu</h2>
+        </div>
+        <div class="sobre-grid">
+            <div class="sobre-text reveal-left">
+                <p>
+                    Sou desenvolvedor <strong>backend sênior</strong> com quase <strong>10 anos de experiência</strong>,
+                    especializado em construir sistemas robustos, APIs de alta performance e integrações
+                    complexas entre plataformas — com forte atuação em <strong>automação comercial</strong>,
+                    <strong>contabilidade pública e privada</strong> e <strong>área fiscal</strong>.
                 </p>
+                <p>
+                    Formado em <strong>Sistemas de Informação</strong> e com pós-graduação em <strong>Engenharia de Software</strong>,
+                    tenho profundo domínio de arquitetura de sistemas, legislação fiscal brasileira, reforma tributária
+                    e na comunicação entre sistemas complexos via APIs REST, SOAP e integrações diretas.
+                </p>
+                <p>
+                    Minha principal força está no <strong>backend</strong>: modelagem de dados, arquitetura de serviços,
+                    regras de negócio complexas e integrações que realmente funcionam em produção.
+                </p>
+                <div class="sobre-tags">
+                    <span class="tag"><i class="fas fa-check"></i> Legislação Fiscal</span>
+                    <span class="tag"><i class="fas fa-check"></i> Reforma Tributária</span>
+                    <span class="tag"><i class="fas fa-check"></i> NF-e / NFC-e</span>
+                    <span class="tag"><i class="fas fa-check"></i> APIs REST</span>
+                    <span class="tag"><i class="fas fa-check"></i> Microsserviços</span>
+                    <span class="tag"><i class="fas fa-check"></i> Integrações</span>
+                    <span class="tag"><i class="fas fa-check"></i> eSocial / SIAFIC</span>
+                    <span class="tag"><i class="fas fa-check"></i> Contabilidade Pública</span>
+                </div>
+            </div>
+            <div class="sobre-stack reveal-right">
+                <h3 class="stack-title">Stack Principal</h3>
+                <div class="stack-items">
+                    <div class="stack-item primary">
+                        <i class="fab fa-java"></i>
+                        <div>
+                            <span class="stack-name">Java</span>
+                            <span class="stack-level">Spring Boot · APIs · Microsserviços</span>
+                        </div>
+                        <span class="stack-badge">Senior</span>
+                    </div>
+                    <div class="stack-item primary">
+                        <i class="fas fa-desktop"></i>
+                        <div>
+                            <span class="stack-name">Delphi</span>
+                            <span class="stack-level">Sistemas Desktop · Backend robusto</span>
+                        </div>
+                        <span class="stack-badge">Senior</span>
+                    </div>
+                    <div class="stack-item primary">
+                        <i class="fab fa-php"></i>
+                        <div>
+                            <span class="stack-name">PHP / Laravel</span>
+                            <span class="stack-level">APIs REST · Backend web</span>
+                        </div>
+                        <span class="stack-badge">Senior</span>
+                    </div>
+                    <div class="stack-item">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <span class="stack-name">PostgreSQL / SQL Server</span>
+                            <span class="stack-level">Firebird · Oracle · MySQL</span>
+                        </div>
+                    </div>
+                    <div class="stack-item">
+                        <i class="fas fa-network-wired"></i>
+                        <div>
+                            <span class="stack-name">APIs & Integrações</span>
+                            <span class="stack-level">REST · SOAP · Webhooks · EDI</span>
+                        </div>
+                    </div>
+                    <div class="stack-item">
+                        <i class="fab fa-aws"></i>
+                        <div>
+                            <span class="stack-name">Infraestrutura</span>
+                            <span class="stack-level">AWS · Linux · Apache · Docker</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Minha Abordagem Section -->
-<section class="approach fade-in">
+<!-- ===== ESPECIALIDADES ===== -->
+<section class="especialidades" id="especialidades">
     <div class="container">
-        <h2 class="section-title"><span>02.</span> Minha Abordagem</h2>
-        <div class="approach-grid">
-            <div class="approach-card">
-                <i class="fas fa-code"></i>
-                <h3>Pragmático & Direto</h3>
-                <p>Valorizo código limpo e eficiente, sem rodeios desnecessários. Cada linha deve ter propósito claro e contribuir para a solução.</p>
-            </div>
-            <div class="approach-card">
-                <i class="fas fa-swatchbook"></i>
-                <h3>Funcional + Estético</h3>
-                <p>Unio robustez técnica com interfaces intuitivas. Um sistema precisa funcionar perfeitamente E oferecer boa experiência.</p>
-            </div>
-            <div class="approach-card">
-                <i class="fas fa-chess-knight"></i>
-                <h3>Estratégia Completa</h3>
-                <p>Da arquitetura backend à implantação, penso em todas as camadas do sistema e como elas se integram no mundo real.</p>
-            </div>
+        <div class="section-header center">
+            <span class="section-tag">02. especialidades</span>
+            <h2 class="section-title">Onde me destaco</h2>
+            <p class="section-subtitle">Backend sênior com foco em sistemas críticos, APIs e integrações complexas ao longo de quase uma década</p>
         </div>
-        <div class="approach-quote">
-            <p>"Um desenvolvedor completo, prático e direto, que valoriza tanto o funcionamento quanto o visual, e encara sistemas complexos com responsabilidade técnica e autonomia."</p>
+        <div class="esp-grid">
+            <div class="esp-card reveal" data-delay="0">
+                <div class="esp-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3>Integrações & APIs</h3>
+                <p>Especialista em integração entre sistemas heterogêneos. Desenvolvimento e consumo de APIs REST, SOAP e webhooks. Comunicação com sistemas governamentais, ERP, bancos e marketplaces.</p>
+                <ul class="esp-list">
+                    <li>APIs REST / SOAP / GraphQL</li>
+                    <li>Integração com Receita Federal</li>
+                    <li>eSocial, SIAFIC, SEFAZ</li>
+                    <li>Integrações bancárias e contábeis</li>
+                </ul>
+            </div>
+            <div class="esp-card featured-card reveal" data-delay="100">
+                <div class="esp-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h3>Contabilidade Pública</h3>
+                <p>Anos de experiência em sistemas de contabilidade pública utilizados por prefeituras e órgãos governamentais em todo o Brasil, com clientes de grande porte como Santos-SP, Porto Velho-RO e Rio Branco-AC.</p>
+                <ul class="esp-list">
+                    <li>Sistemas para prefeituras</li>
+                    <li>Prestação de contas e SIAFIC</li>
+                    <li>Relatórios fiscais e contábeis</li>
+                    <li>Integração com sistemas externos</li>
+                </ul>
+            </div>
+            <div class="esp-card reveal" data-delay="200">
+                <div class="esp-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>Automação Comercial</h3>
+                <p>Desenvolvimento completo de ERPs e sistemas PDV para varejo e atacado, com operação online e offline, sincronização de dados e total conformidade fiscal.</p>
+                <ul class="esp-list">
+                    <li>ERP Web e Desktop</li>
+                    <li>PDV com operação offline</li>
+                    <li>NF-e / NFC-e / MDF-e</li>
+                    <li>Sincronização bidirecional</li>
+                </ul>
+            </div>
+            <div class="esp-card reveal" data-delay="0">
+                <div class="esp-icon">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h3>Área Fiscal & Tributária</h3>
+                <p>Profundo conhecimento em legislação fiscal brasileira, documentos eletrônicos e a nova reforma tributária. Criador do TributôIA, sistema de classificação de produtos com inteligência artificial.</p>
+                <ul class="esp-list">
+                    <li>NF-e · NFC-e · NFS-e · CT-e · MDF-e</li>
+                    <li>SPED Fiscal · EFD-ICMS/IPI</li>
+                    <li>Reforma Tributária · IBS · CBS · IS</li>
+                    <li>NCM · CEST · CFOP · CST</li>
+                    <li>Substituição tributária · DIFAL</li>
+                    <li>IA aplicada à classificação fiscal</li>
+                </ul>
+            </div>
+            <div class="esp-card reveal" data-delay="100">
+                <div class="esp-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <h3>Java & Spring</h3>
+                <p>Backend robusto com Java e Spring Boot — microsserviços, APIs REST de alta performance, regras de negócio complexas e migração de sistemas legados críticos.</p>
+                <ul class="esp-list">
+                    <li>Spring Boot · Spring MVC · Spring Data</li>
+                    <li>Arquitetura de microsserviços</li>
+                    <li>APIs REST de alta performance</li>
+                    <li>Migração e modernização de legados</li>
+                </ul>
+            </div>
+            <div class="esp-card reveal" data-delay="200">
+                <div class="esp-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Delphi & Sistemas Desktop</h3>
+                <p>Backend e lógica de negócio em Delphi para sistemas desktop de grande porte — ERPs, PDVs e aplicações críticas com alto volume de transações e regras fiscais complexas.</p>
+                <ul class="esp-list">
+                    <li>Delphi 7 ao atual</li>
+                    <li>Lógica de negócio e regras fiscais</li>
+                    <li>Sistemas de alto volume transacional</li>
+                    <li>Modernização de sistemas legados</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Projetos Section -->
-<section id="projetos" class="projects fade-in">
+<!-- ===== PROJETOS ===== -->
+<section class="projetos" id="projetos">
     <div class="container">
-        <h2 class="section-title"><span>03.</span> Projetos em Destaque</h2>
+        <div class="section-header">
+            <span class="section-tag">03. projetos</span>
+            <h2 class="section-title">Projetos em destaque</h2>
+        </div>
 
-        <!-- Projeto 1 - ERP PHP/Laravel -->
-        <div class="project-card featured">
-            <div class="project-header">
+        <!-- TributôIA - Destaque máximo -->
+        <div class="project-spotlight reveal">
+            <div class="spotlight-label">
+                <i class="fas fa-star"></i> Projeto mais recente
+            </div>
+            <div class="spotlight-content">
+                <div class="spotlight-text">
+                    <div class="spotlight-techs">
+                        <span>IA / Machine Learning</span>
+                        <span>Reforma Tributária</span>
+                        <span>NCM / EAN</span>
+                        <span>API REST</span>
+                    </div>
+                    <h3>TributôIA</h3>
+                    <p class="spotlight-subtitle">Classificação de produtos com Inteligência Artificial para a nova reforma tributária</p>
+                    <p>
+                        Sistema inovador que utiliza <strong>inteligência artificial</strong> para classificar produtos
+                        de acordo com as regras da <strong>nova reforma tributária brasileira</strong>.
+                        O sistema recebe inputs como descrição do produto, NCM, EAN e outras informações,
+                        e entrega a classificação fiscal correta de forma automatizada, rápida e precisa.
+                    </p>
+                    <ul class="spotlight-list">
+                        <li><i class="fas fa-check-circle"></i> Classificação automática via IA com base em descrição, NCM e EAN</li>
+                        <li><i class="fas fa-check-circle"></i> Atualizado com as regras da nova reforma tributária brasileira</li>
+                        <li><i class="fas fa-check-circle"></i> API para integração com ERPs e sistemas de gestão</li>
+                        <li><i class="fas fa-check-circle"></i> Redução drástica de erros de classificação fiscal</li>
+                        <li><i class="fas fa-check-circle"></i> Interface intuitiva para uso direto pelo contador ou fiscal</li>
+                    </ul>
+                    <a href="https://tributoia.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary spotlight-btn">
+                        <i class="fas fa-external-link-alt"></i> Acessar tributoia.com
+                    </a>
+                </div>
+                <div class="spotlight-visual">
+                    <div class="ai-card">
+                        <div class="ai-card-header">
+                            <i class="fas fa-robot"></i>
+                            <span>TributôIA · Análise Fiscal</span>
+                            <span class="ai-status">Live</span>
+                        </div>
+                        <div class="ai-input-sim">
+                            <div class="ai-field">
+                                <span class="ai-label">Descrição</span>
+                                <span class="ai-value">Notebook Intel Core i7...</span>
+                            </div>
+                            <div class="ai-field">
+                                <span class="ai-label">NCM</span>
+                                <span class="ai-value">8471.30.12</span>
+                            </div>
+                            <div class="ai-field">
+                                <span class="ai-label">EAN</span>
+                                <span class="ai-value">7891234567890</span>
+                            </div>
+                        </div>
+                        <div class="ai-processing">
+                            <div class="ai-bar"></div>
+                            <span>Classificando com IA...</span>
+                        </div>
+                        <div class="ai-result">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <span class="ai-result-label">Classificação</span>
+                                <span class="ai-result-value">Eletrônicos · IBS 12% · CBS 0,9%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de projetos -->
+        <div class="projects-grid">
+
+            <!-- Projeto ERP Web/Desktop -->
+            <div class="project-card reveal" data-delay="0">
+                <div class="project-card-header">
+                    <div class="project-icon"><i class="fas fa-store-alt"></i></div>
+                    <div class="project-links-top">
+                        <span class="proj-tag">Backend</span>
+                    </div>
+                </div>
                 <h3>ERP de Automação Comercial Web/Desktop</h3>
-                <div class="project-links">
-                    <span class="featured-badge">Destaque</span>
+                <p>Sistema completo para médias e grandes empresas do varejo e atacado. Operação online e offline com sincronização bidirecional automática via API. Disponível em <a href="https://infosistemasvix.com.br" target="_blank" rel="noopener noreferrer" class="inline-link">infosistemasvix.com.br</a>.</p>
+                <div class="project-highlights">
+                    <div class="ph-item"><i class="fas fa-wifi-slash"></i> Offline-first com sync automático</div>
+                    <div class="ph-item"><i class="fas fa-file-invoice"></i> NF-e / NFC-e / NFS-e integrados</div>
+                    <div class="ph-item"><i class="fas fa-users"></i> Centenas de usuários simultâneos</div>
+                </div>
+                <div class="project-footer-techs">
+                    <span>PHP</span><span>Laravel</span><span>PostgreSQL</span><span>API REST</span><span>Delphi</span>
                 </div>
             </div>
-            <div class="project-techs">
-                <span><i class="fab fa-php"></i> PHP</span>
-                <span><i class="fab fa-laravel"></i> Laravel</span>
-                <span>PostgreSQL</span>
-                <span>API REST</span>
-                <span>Sincronização Bidirecional</span>
-            </div>
-            <div class="project-content">
-                <p>
-                    Sistema completo de automação comercial desenvolvido para operar tanto online quanto offline, atendendo empresas de médio e grande porte do varejo e atacado. O projeto envolveu desde a análise de requisitos, arquitetura, desenvolvimento fullstack, até a implantação e treinamento dos usuários.
-                </p>
-                <ul>
-                    <li>Versão web para gestão (cadastros, relatórios, NF-e, controle de estoque e financeiro)</li>
-                    <li>PDV desktop instalável para locais com internet instável, garantindo operação contínua</li>
-                    <li>Sincronização bidirecional via API personalizada, com resolução automática de conflitos</li>
-                    <li>Total conformidade com legislação fiscal brasileira, incluindo emissão de notas fiscais eletrônicas</li>
-                    <li>Implementação de autenticação segura, controle de permissões e logs de auditoria</li>
-                    <li>Desenvolvimento de integrações com sistemas de terceiros (contabilidade, bancos, marketplaces)</li>
-                </ul>
-                <p class="project-result">
-                    <i class="fas fa-check-circle"></i> <strong>Diferencial:</strong> Solução híbrida que elimina perda de vendas mesmo sem conexão, com sincronização automática quando a internet volta. Projeto desenvolvido 100% solo, com foco em escalabilidade, segurança e experiência do usuário. O sistema atualmente atende centenas de usuários simultâneos e já processou milhões em transações.
-                </p>
-            </div>
-        </div>
 
-        <!-- Projeto 2 - Software Contabilidade Pública -->
-        <div class="project-card">
-            <div class="project-header">
+            <!-- Projeto Contabilidade Pública -->
+            <div class="project-card featured reveal" data-delay="100">
+                <div class="project-card-header">
+                    <div class="project-icon gov"><i class="fas fa-landmark"></i></div>
+                    <div class="project-links-top">
+                        <span class="proj-tag gov-tag">Gov</span>
+                    </div>
+                </div>
                 <h3>Sistema de Contabilidade Pública</h3>
-                <div class="project-links">
-                    <span class="featured-badge">Destaque</span>
+                <p>Sistema utilizado por dezenas de municípios brasileiros, incluindo grandes cidades como <strong>Santos-SP, Porto Velho-RO e Rio Branco-AC</strong>. Responsável por todas as integrações externas e comunicação entre sistemas.</p>
+                <div class="project-highlights">
+                    <div class="ph-item"><i class="fas fa-city"></i> Santos-SP, Porto Velho-RO, Rio Branco-AC</div>
+                    <div class="ph-item"><i class="fas fa-plug"></i> Integração SIAFIC, eSocial, Receita Federal</div>
+                    <div class="ph-item"><i class="fas fa-exchange-alt"></i> Arquiteto das integrações externas</div>
+                </div>
+                <div class="project-footer-techs">
+                    <span>Java</span><span>Spring</span><span>Delphi</span><span>PostgreSQL</span><span>SQL Server</span>
                 </div>
             </div>
-            <div class="project-techs">
-                <span><i class="fab fa-java"></i> Java</span>
-                <span><i class="fas fa-database"></i> PostgreSQL</span>
-                <span>Delphi</span>
-                <span>SQL Server</span>
-                <span>Microsserviços</span>
+
+            <!-- Projeto ERP Delphi -->
+            <div class="project-card reveal" data-delay="200">
+                <div class="project-card-header">
+                    <div class="project-icon"><i class="fas fa-cash-register"></i></div>
+                    <div class="project-links-top">
+                        <span class="proj-tag">Desktop</span>
+                    </div>
+                </div>
+                <h3>ERP Desktop — Automação Comercial</h3>
+                <p>Sistema desktop completo desenvolvido do zero com Delphi para pequenas e médias empresas. Controle de estoque, vendas, financeiro, PDV e emissão de documentos fiscais totalmente integrados.</p>
+                <div class="project-highlights">
+                    <div class="ph-item"><i class="fas fa-check"></i> 100% solo — do requisito ao deploy</div>
+                    <div class="ph-item"><i class="fas fa-file-alt"></i> NF-e, NFC-e integrados à SEFAZ</div>
+                    <div class="ph-item"><i class="fas fa-building"></i> Dezenas de empresas utilizando</div>
+                </div>
+                <div class="project-footer-techs">
+                    <span>Delphi</span><span>MySQL</span><span>NF-e</span><span>PDV</span>
+                </div>
             </div>
-            <div class="project-content">
-                <p>
-                    Atuação em sistemas de contabilidade pública utilizados por prefeituras e órgãos governamentais em todo o Brasil. O desafio foi modernizar um sistema legado robusto, garantindo a continuidade dos serviços e a conformidade com normas do setor público.
-                </p>
-                <ul>
-                    <li>Migração do sistema legado (Delphi 2006 + SQL Server) para nova versão em Java, com arquitetura baseada em microsserviços</li>
-                    <li>Desenvolvimento de APIs REST para integração com sistemas governamentais (SIAFIC, eSocial, Receita Federal)</li>
-                    <li>Manutenção e evolução das duas versões em paralelo, garantindo transição suave para os clientes</li>
-                    <li>Implementação de rotinas de importação/exportação de dados, relatórios fiscais e módulos de prestação de contas</li>
-                    <li>Automação de processos manuais, reduzindo erros e aumentando a produtividade dos usuários</li>
-                </ul>
-                <p class="project-result">
-                    <i class="fas fa-check-circle"></i> <strong>Resultado:</strong> Transição bem-sucedida para os clientes, mantendo todas funcionalidades do sistema antigo enquanto adiciona novas capacidades. O sistema atende atualmente dezenas de municípios, processando grandes volumes de dados fiscais e contábeis com alta confiabilidade.
-                </p>
-            </div>
+
         </div>
 
-        <!-- Projeto 3 - ERP Delphi -->
-        <div class="project-card">
-            <h3>ERP de Automação Comercial</h3>
-            <div class="project-techs">
-                <span>Delphi</span>
-                <span>MySQL</span>
-                <span>NF-e</span>
-                <span>PDV</span>
-                <span>Legislação Fiscal</span>
-            </div>
-            <div class="project-content">
-                <p>
-                    Sistema desktop completo desenvolvido do zero, focado em pequenas e médias empresas do comércio. O projeto envolveu desde a concepção, levantamento de requisitos, desenvolvimento, testes, implantação e suporte contínuo.
-                </p>
-                <ul>
-                    <li>Módulo fiscal com emissão de NF-e e NFC-e, totalmente integrado à Receita Federal</li>
-                    <li>Controle de estoque, vendas, compras e financeiro integrado</li>
-                    <li>PDV (Ponto de Venda) otimizado para alta performance e facilidade de uso</li>
-                    <li>Implementação de rotinas de backup automático e recuperação de dados</li>
-                    <li>Customização de relatórios gerenciais e dashboards para tomada de decisão</li>
-                </ul>
-                <p class="project-result">
-                    <i class="fas fa-check-circle"></i> <strong>Destaque:</strong> Desenvolvimento 100% solo, desde análise de requisitos até implantação. O sistema já foi utilizado por dezenas de empresas, contribuindo para a modernização e automação de processos internos.
-                </p>
-            </div>
-        </div>
-        <div class="project-card" style="text-align:center; background:rgba(100,255,218,0.05); border-left:3px dashed var(--accent);">
-            <h3 style="color:var(--accent); font-size:1.2rem; margin-bottom:1rem;"><i class="fas fa-ellipsis-h"></i> E muitos outros projetos!</h3>
-            <p style="color:var(--text-secondary); font-size:1.05rem;">Ao longo da minha carreira, já atuei em dezenas de outros sistemas, integrações, APIs, automações e soluções personalizadas para empresas de diversos segmentos.<br>Entre em contato para saber mais ou solicitar referências específicas.</p>
+        <div class="projects-more">
+            <p>Ao longo de quase 10 anos, atuei em dezenas de outros sistemas, APIs, automações e integrações para empresas dos mais diversos segmentos.</p>
+            <a href="#contato" class="btn btn-ghost">Solicitar portfólio completo</a>
         </div>
     </div>
 </section>
 
-<!-- Contato Section -->
-<section id="contato" class="contact fade-in">
+<!-- ===== EXPERIÊNCIA / TIMELINE ===== -->
+<section class="experiencia" id="experiencia">
     <div class="container">
-        <h2 class="section-title"><span>04.</span> Vamos Conversar?</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Disponível para oportunidades e colaborações</h3>
-                <p>Interessado em trabalhar juntos ou tem alguma dúvida? Entre em contato por qualquer um dos canais abaixo:</p>
-
-                <div class="contact-methods">
-                    <a href="mailto:contato@brenoluiz.dev" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contato@brenoluiz.dev</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/breno-luiz-schaefel-07572214a/" target="_blank" class="contact-item">
-                        <i class="fab fa-linkedin-in"></i>
-                        <span>/breno-luiz-schaefel</span>
-                    </a>
-                    <a href="https://www.instagram.com/brenoluiz54/" target="_blank" class="contact-item">
-                        <i class="fab fa-instagram"></i>
-                        <span>@brenoluiz54</span>
-                    </a>
-                    <a href="https://github.com/BrenoSchaefel" target="_blank" class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <span>@BrenoSchaefel</span>
-                    </a>
-                </div>
-
-                <div class="contact-quote">
-                    <p>"Autônomo, detalhista e comprometido com entregas de excelência - desde o código até a experiência do usuário final."</p>
+        <div class="section-header center">
+            <span class="section-tag">04. trajetória</span>
+            <h2 class="section-title">Quase 10 anos de código</h2>
+            <p class="section-subtitle">Uma trajetória construída em sistemas críticos, clientes exigentes e soluções que realmente funcionam</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content right">
+                    <span class="timeline-year">Início de carreira</span>
+                    <h3>Delphi & Automação Comercial</h3>
+                    <p>Mergulho em sistemas desktop com Delphi. Desenvolvimento de ERP de automação comercial do zero — PDV, controle de estoque, financeiro e emissão de documentos fiscais (NF-e, NFC-e). Sistema adotado por dezenas de empresas.</p>
                 </div>
             </div>
-
-            <form class="contact-form" action="https://formsubmit.co/contato@brenoluiz.dev" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://brenoluiz.dev/obrigado.html">
-
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Seu nome" required>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content left">
+                    <span class="timeline-year">Expansão backend web</span>
+                    <h3>PHP, Laravel & APIs REST</h3>
+                    <p>Expansão do backend para o mundo web com PHP e Laravel. Desenvolvimento de APIs REST robustas, integrações entre sistemas e lógica de negócio para o setor comercial e fiscal.</p>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Seu e-mail" required>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content right">
+                    <span class="timeline-year">Contabilidade Pública & Gov</span>
+                    <h3>Java, Spring & Microsserviços</h3>
+                    <p>Atuação em sistemas de contabilidade pública com Java e Spring Boot. Responsável pela arquitetura de integrações com SIAFIC, eSocial, Receita Federal e sistemas de terceiros. Clientes de grande porte: Santos-SP, Porto Velho-RO e Rio Branco-AC.</p>
                 </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content left">
+                    <span class="timeline-year">ERP Híbrido Web/Desktop</span>
+                    <h3>Infosistemas · Sistema Comercial Completo</h3>
+                    <p>Desenvolvimento de ERP híbrido para médias e grandes empresas — operação online e offline com sincronização bidirecional automática. Total conformidade fiscal: NF-e, NFC-e, NFS-e e integração com SEFAZ. Disponível em <strong>infosistemasvix.com.br</strong>.</p>
                 </div>
-                <button type="submit" class="cta-button">
-                    <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                </button>
-            </form>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot highlight"></div>
+                <div class="timeline-content right">
+                    <span class="timeline-year">Hoje · Quase 10 anos</span>
+                    <h3>TributôIA · IA aplicada ao Fiscal</h3>
+                    <p>Criação do <strong>TributôIA</strong> — sistema inovador que usa inteligência artificial para classificar produtos de acordo com a nova reforma tributária brasileira. Integração via API com ERPs e sistemas de gestão. Disponível em <strong>tributoia.com</strong>.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- ===== CONTATO ===== -->
+<section class="contato" id="contato">
+    <div class="container">
+        <div class="section-header center">
+            <span class="section-tag">05. contato</span>
+            <h2 class="section-title">Vamos trabalhar juntos?</h2>
+            <p class="section-subtitle">Estou aberto a oportunidades, projetos freelance e colaborações. Entre em contato!</p>
+        </div>
+        <div class="contato-grid">
+            <div class="contato-info">
+                <div class="contact-card-link">
+                    <a href="mailto:contato@brenoluiz.dev" class="contact-link-item">
+                        <div class="cl-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="cl-text">
+                            <span class="cl-label">E-mail</span>
+                            <span class="cl-value">contato@brenoluiz.dev</span>
+                        </div>
+                        <i class="fas fa-arrow-right cl-arrow"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/breno-luiz-schaefel-07572214a/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <div class="cl-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="cl-text">
+                            <span class="cl-label">LinkedIn</span>
+                            <span class="cl-value">/breno-luiz-schaefel</span>
+                        </div>
+                        <i class="fas fa-arrow-right cl-arrow"></i>
+                    </a>
+                    <a href="https://github.com/BrenoSchaefel" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <div class="cl-icon github"><i class="fab fa-github"></i></div>
+                        <div class="cl-text">
+                            <span class="cl-label">GitHub</span>
+                            <span class="cl-value">@BrenoSchaefel</span>
+                        </div>
+                        <i class="fas fa-arrow-right cl-arrow"></i>
+                    </a>
+                    <a href="https://www.instagram.com/brenoluiz54/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                        <div class="cl-icon insta"><i class="fab fa-instagram"></i></div>
+                        <div class="cl-text">
+                            <span class="cl-label">Instagram</span>
+                            <span class="cl-value">@brenoluiz54</span>
+                        </div>
+                        <i class="fas fa-arrow-right cl-arrow"></i>
+                    </a>
+                    <a href="https://tributoia.com" target="_blank" rel="noopener noreferrer" class="contact-link-item tributoia">
+                        <div class="cl-icon trib"><i class="fas fa-robot"></i></div>
+                        <div class="cl-text">
+                            <span class="cl-label">Projeto TributôIA</span>
+                            <span class="cl-value">tributoia.com</span>
+                        </div>
+                        <i class="fas fa-arrow-right cl-arrow"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contato-form-wrapper">
+                <form class="contato-form" action="https://formsubmit.co/contato@brenoluiz.dev" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://brenoluiz.dev/obrigado.html">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Nome</label>
+                            <input type="text" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-field">
+                            <label>E-mail</label>
+                            <input type="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Assunto</label>
+                        <input type="text" name="subject" placeholder="Sobre o que deseja falar?">
+                    </div>
+                    <div class="form-field">
+                        <label>Mensagem</label>
+                        <textarea name="message" placeholder="Sua mensagem..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        <i class="fas fa-paper-plane"></i> Enviar mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
-        <p>© <span id="year"></span> Breno Luiz Schaefel. Todos os direitos reservados.</p>
-        <p>Desenvolvido com <i class="fas fa-heart"></i> e código limpo | <a href="https://github.com/BrenoSchaefel" target="_blank" style="color:var(--accent);text-decoration:none;"><i class="fab fa-github"></i> GitHub</a></p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>BL<span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-text">
+                Desenvolvido com <i class="fas fa-heart"></i> por Breno Luiz Schaefel
+                <br><a href="https://brenoluiz.dev" target="_blank">brenoluiz.dev</a>
+            </p>
+            <div class="footer-socials">
+                <a href="https://github.com/BrenoSchaefel" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/breno-luiz-schaefel-07572214a/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:contato@brenoluiz.dev"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> Breno Luiz Schaefel. Todos os direitos reservados.</p>
     </div>
 </footer>
 
